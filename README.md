@@ -2,6 +2,10 @@
 
 Un carnet de notes local-first, calme et glassmorphique, construit avec Next.js.
 
+## Démo
+
+[https://note-ten-sooty.vercel.app](https://note-ten-sooty.vercel.app)
+
 ## Fonctionnalités
 
 - Éditeur riche : gras, italique, souligné, barré, surlignage, liens, citations et listes imbriquées jusqu'à 15 niveaux.
