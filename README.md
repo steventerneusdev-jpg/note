@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NOTE.
 
-## Getting Started
+Un carnet de notes local-first, calme et glassmorphique, construit avec Next.js.
 
-First, run the development server:
+## Fonctionnalités
+
+- Éditeur riche : gras, italique, souligné, barré, surlignage, liens, citations et listes imbriquées jusqu'à 15 niveaux.
+- Sauvegarde automatique dans le navigateur, à chaque modification.
+- Répertoire avec recherche, notes épinglées et suppression avec annulation.
+- Collections pour ranger les notes, avec filtres, renommage et suppression.
+- Tags sur les notes, affichés dans le répertoire et utilisables comme filtres.
+- Thème clair / sombre et interface responsive.
+
+## Stack
+
+- [Next.js 16](https://nextjs.org/) avec App Router et Turbopack
+- [React 19](https://react.dev/)
+- [Tailwind CSS 4](https://tailwindcss.com/)
+- [Lucide](https://lucide.dev/) pour les icônes
+
+## Développement
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+L'application est disponible sur [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Données
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+NOTE. ne dépend d'aucun serveur : les notes, collections et tags sont stockés dans le `localStorage` du navigateur, sous les clés `lumen.notes.v1` et `lumen.collections.v1`. Les données restent donc sur l'appareil et dans le profil du navigateur utilisé.
 
-## Learn More
+## Vérifications
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npx tsc --noEmit
+npm run lint
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Déploiement
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Le projet est prêt pour un déploiement Vercel. Aucune variable d'environnement n'est nécessaire pour cette version.
